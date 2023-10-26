@@ -13,11 +13,11 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
         {
           name: 'title',
-          content: 'SystemShift Limited'
+          content: 'Youverify Frontend Final Assessement'
         },
         {
           name: 'description',
-          content: 'Youverify Frontend Final Assessement'
+          content: 'We are a B2B company that builds SaaS and PaaS compliance products to help businesses establish economic relationships without compliance worries'
         }
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },

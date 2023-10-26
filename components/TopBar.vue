@@ -34,9 +34,9 @@
     <!-- Search bar -->
 
     <div class="flex w-full justify-between">
-      <div class="hidden w-[890px] md:flex justify-center">
+      <div class="hidden md:grid md:grid-cols-12  justify-center">
         <!-- Search bar -->
-        <form class="flex items-center w-full">
+        <form class="flex items-center  col-span-10">
           <div class="relative w-full">
             <div class="flex absolute inset-y-0 left-0 pointer-events-none">
               <div class="relative">
@@ -63,7 +63,7 @@
             <input
               type="text"
               id="voice-search"
-              class="bg-[#F1F1F1] border text-gray-900 text-sm rounded block w-full pl-20 p-2.5"
+              class="bg-[#F1F1F1]  border text-gray-900 text-sm rounded block w-full pl-20 p-2.5"
               placeholder="Search..."
               required
             />
@@ -89,36 +89,49 @@
         </form>
       </div>
       <!-- User login -->
-      <div class="ml-6">
-        
+      <div class="ml-6 col-span-2" >
         <div
           class="flex items-center justify-start space-x-4"
           @click="toggleDrop"
         >
-        <div class="relative border bg-[#C2E2E9] p-1 rounded-full">
-        <!-- Notification icon -->
-        <div class="relative inline-block">
-          <!-- Notification icon itself -->
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M21.0638 12.3696C20.3016 11.4794 19.9552 10.7081 19.9552 9.39756V8.95196C19.9552 7.24421 19.5621 6.1439 18.7076 5.04358C17.3905 3.33478 15.1733 2.30487 13.0027 2.30487H12.9104C10.7854 2.30487 8.63762 3.28748 7.29772 4.92693C6.39651 6.04931 5.95782 7.19692 5.95782 8.95196V9.39756C5.95782 10.7081 5.63426 11.4794 4.84919 12.3696C4.27154 13.0253 4.08694 13.8682 4.08694 14.7804C4.08694 15.6936 4.38666 16.5586 4.98816 17.2616C5.77322 18.1045 6.88186 18.6425 8.01434 18.7361C9.65395 18.9231 11.2936 18.9935 12.957 18.9935C14.6195 18.9935 16.2591 18.8758 17.8997 18.7361C19.0312 18.6425 20.1398 18.1045 20.9249 17.2616C21.5253 16.5586 21.8261 15.6936 21.8261 14.7804C21.8261 13.8682 21.6415 13.0253 21.0638 12.3696Z" fill="#0F808C"/>
-    <path opacity="0.4" d="M15.0525 20.2823C14.5309 20.1709 11.3523 20.1709 10.8306 20.2823C10.3847 20.3853 9.90244 20.6249 9.90244 21.1503C9.92836 21.6516 10.2219 22.0941 10.6284 22.3747L10.6273 22.3757C11.1531 22.7856 11.7702 23.0462 12.4163 23.1397C12.7606 23.187 13.1111 23.1849 13.4679 23.1397C14.113 23.0462 14.73 22.7856 15.2558 22.3757L15.2548 22.3747C15.6613 22.0941 15.9548 21.6516 15.9807 21.1503C15.9807 20.6249 15.4985 20.3853 15.0525 20.2823Z" fill="#0F808C"/>
-    </svg>
+          <div class="relative border bg-[#C2E2E9] p-1 rounded-full">
+            <!-- Notification icon -->
+            <div class="relative inline-block">
+              <!-- Notification icon itself -->
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.0638 12.3696C20.3016 11.4794 19.9552 10.7081 19.9552 9.39756V8.95196C19.9552 7.24421 19.5621 6.1439 18.7076 5.04358C17.3905 3.33478 15.1733 2.30487 13.0027 2.30487H12.9104C10.7854 2.30487 8.63762 3.28748 7.29772 4.92693C6.39651 6.04931 5.95782 7.19692 5.95782 8.95196V9.39756C5.95782 10.7081 5.63426 11.4794 4.84919 12.3696C4.27154 13.0253 4.08694 13.8682 4.08694 14.7804C4.08694 15.6936 4.38666 16.5586 4.98816 17.2616C5.77322 18.1045 6.88186 18.6425 8.01434 18.7361C9.65395 18.9231 11.2936 18.9935 12.957 18.9935C14.6195 18.9935 16.2591 18.8758 17.8997 18.7361C19.0312 18.6425 20.1398 18.1045 20.9249 17.2616C21.5253 16.5586 21.8261 15.6936 21.8261 14.7804C21.8261 13.8682 21.6415 13.0253 21.0638 12.3696Z"
+                  fill="#0F808C"
+                />
+                <path
+                  opacity="0.4"
+                  d="M15.0525 20.2823C14.5309 20.1709 11.3523 20.1709 10.8306 20.2823C10.3847 20.3853 9.90244 20.6249 9.90244 21.1503C9.92836 21.6516 10.2219 22.0941 10.6284 22.3747L10.6273 22.3757C11.1531 22.7856 11.7702 23.0462 12.4163 23.1397C12.7606 23.187 13.1111 23.1849 13.4679 23.1397C14.113 23.0462 14.73 22.7856 15.2558 22.3757L15.2548 22.3747C15.6613 22.0941 15.9548 21.6516 15.9807 21.1503C15.9807 20.6249 15.4985 20.3853 15.0525 20.2823Z"
+                  fill="#0F808C"
+                />
+              </svg>
 
-      
-          <!-- Notification count -->
-          <div class="absolute -top-2 -right-1 w-4 h-4 bg-red-500 text-white text-xs font-semibold rounded-full flex items-center justify-center">
-            2
+              <!-- Notification count -->
+              <div
+                class="absolute -top-2 -right-1 w-4 h-4 bg-red-500 text-white text-xs font-semibold rounded-full flex items-center justify-center"
+              >
+                2
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           <img
-            class="w-10 h-10 rounded-full border-2 "
+            class="w-10 h-10 rounded-full border-2"
             src="/smiling.png"
             alt=""
           />
           <button
             type="button"
-            class="flex justify-center items-center gap-4 rounded-md  py-2 bg-white text-sm font-medium text-[#0B0A0A]"
+            class="flex justify-center items-center gap-4 rounded-md py-2 bg-white text-sm font-medium text-[#0B0A0A]"
             id="options-menu"
             aria-haspopup="listbox"
           >
@@ -126,71 +139,24 @@
               class="flex items-center gap-2 text-[#023A59] whitespace-nowrap text-base font-normal leading-6"
             >
               Bosipo Ogunleye
-            <svg
-              class="h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
+              <svg
+                class="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </span>
           </button>
         </div>
         <!-- Drop down -->
-        <div
-          v-show="showDropDown"
-          class="absolute right-[10px] z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabindex="-1"
-        >
-          <div class="py-1 text-left" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-              >Account settings</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-              >Support</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >License</a
-            >
-            <form method="POST" action="#" role="none">
-              <button
-                type="submit"
-                class="text-gray-700 block w-full px-4 py-2 text-left text-sm"
-                role="menuitem"
-                tabindex="-1"
-                id="menu-item-3"
-              >
-                Sign out
-              </button>
-            </form>
-          </div>
         </div>
-      </div>
     </div>
   </div>
 </template>

@@ -1,28 +1,19 @@
 <template>
-    <div
-        class="relative md:max-h-screen min-h-screen bg-white flex flex-col items-stretch w-full overflow-hidden @container">
+    <div class="relative md:max-h-screen min-h-screen bg-white md:flex w-full overflow-hidden">
         <!-- Top bar -->
-        <TopBar @toggle-sidebar="toggleSidebar" />
+        <div class="flex flex-col flex-1 overflow-hidden">
+            <TopBar @toggle-sidebar="toggleSidebar" class="" />
 
-        <div class="flex">
             <!-- Side bar -->
-            <transition name="sidebar" mode="out-in">
-
-                <div :class="[
-                    `h-full z-10 shadow-sm border-r  sidebar`,
-                    showSide ? 'w-[241px]' : 'hidden  md:w-[50px]' 
-                ]"  >
-                    <SideBar  @toggle-sidebar="toggleSidebar"/>
-                </div>
-            </transition>
-
             <!-- Main content -->
-            <div class="w-full h-full bg-gray-400">
-                <div class="h-[calc(100vh-50px)] bg-gray-50 p-[20px]">
-                    <div class="border border-gray-300 rounded-md p-[20px] h-full">
-                        <slot></slot>
+            <div class="flex overflow-auto min-h-screen md:min-h-0 md:overflow-y-hidden md:px-auto md:pt-auto text-base">
+                <transition name="sidebar-slide" mode="out-in">
+                    <div class="h-full z-10 shadow-sm border-r sidebar"
+                        :style="{ 'max-width': showSide ? '241px' : '0', opacity: showSide ? 1 : 0 }">
+                        <SideBar @toggle-sidebar="toggleSidebar" />
                     </div>
-                </div>
+                </transition>
+                <slot></slot>
             </div>
         </div>
     </div>
@@ -38,20 +29,25 @@ const toggleSidebar = () => {
 };
 </script>
 
-<style>
-
+<style scoped>
 .sidebar {
-    transition: width 0.9s ease-in-out;
+    transition: max-width 0.9s ease-in-out, opacity 0.9s ease-in-out;
 }
 
-.sidebar-enter,
-.sidebar-leave-to {
-    width: 241px;
-    /* Original sidebar width */
-    /* Adjust the width as per your design */
+.sidebar-slide-enter-active,
+.sidebar-slide-leave-active {
+    transition: max-width 0.9s ease-in-out, opacity 0.9s ease-in-out;
 }
 
-.showSide {
-    width: 50px;
-    /* Adjust the width as per your design */
-}</style>
+.sidebar-slide-enter,
+.sidebar-slide-leave-to {
+    max-width: 0;
+    opacity: 0;
+}
+
+.sidebar-slide-enter-to,
+.sidebar-slide-leave {
+    max-width: 241px;
+    opacity: 1;
+}
+</style>

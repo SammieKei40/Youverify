@@ -1,8 +1,8 @@
 <template>
-    <div class="h-[calc(100vh-50px)] bg-white py-[2px]">
+    <div class="h-screen bg-white py-[2px]">
         
         <div class="flex flex-col justify-between space-y-[10px]" >
-            <div class="flex flex-col  justify-start w-full mx-auto mb-8 gap-2 py-3 px-6">
+            <div class="flex flex-col z-10 justify-start w-full mx-auto mb-8 gap-2 py-3 px-6">
                 <span class=" font-bold text-[#115766]">Cheta And Daughters Limited</span>
                 <span class="text-[#115766] font-normal">RC123456789</span>
                 
