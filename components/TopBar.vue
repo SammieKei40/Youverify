@@ -4,7 +4,10 @@
   >
     <Header />
     <!-- Hambuger menu -->
-    <div class="cursor-pointer px-[48px] w-[30px]" @click="toggleSidebar">
+    <div
+      class="cursor-pointer px-3 md:px-[48px] w-[30px]"
+      @click="toggleSidebar"
+    >
       <svg
         width="30"
         height="30"
@@ -34,17 +37,29 @@
     <!-- Search bar -->
 
     <div class="flex w-full justify-between">
-      <div class="hidden md:grid md:grid-cols-12  justify-center">
+      <div class="hidden md:grid md:grid-cols-12 justify-center">
         <!-- Search bar -->
-        <form class="flex items-center  col-span-10">
+        <form class="flex items-center w-[249px] col-span-10">
           <div class="relative w-full">
             <div class="flex absolute inset-y-0 left-0 pointer-events-none">
               <div class="relative">
                 <button
                   @click="toggleDropdown"
-                  class="text-[#999999] border w-20 p-2 rounded"
+                  class="text-[#999999] flex justify-between border w-20 p-2 rounded"
                 >
                   All
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.24106 7.7459C4.53326 7.44784 4.99051 7.42074 5.31272 7.66461L5.40503 7.7459L12 14.4734L18.595 7.7459C18.8872 7.44784 19.3444 7.42074 19.6666 7.66461L19.7589 7.7459C20.0511 8.04396 20.0777 8.51037 19.8386 8.83904L19.7589 8.93321L12.582 16.2541C12.2898 16.5522 11.8325 16.5793 11.5103 16.3354L11.418 16.2541L4.24106 8.93321C3.91965 8.60534 3.91965 8.07376 4.24106 7.7459Z"
+                      fill="#999999"
+                    />
+                  </svg>
                 </button>
 
                 <div
@@ -63,7 +78,7 @@
             <input
               type="text"
               id="voice-search"
-              class="bg-[#F1F1F1]  border text-gray-900 text-sm rounded block w-full pl-20 p-2.5"
+              class="bg-[#F1F1F1] border text-gray-900 text-sm rounded block w-full pl-24 focus:border-[#46B2C8] p-2.5"
               placeholder="Search..."
               required
             />
@@ -72,24 +87,25 @@
               class="flex absolute inset-y-0 right-0 items-center pr-3"
             >
               <svg
-                aria-hidden="true"
-                class="w-5 h-auto text-gray-500"
-                fill="currentColor"
+                width="20"
+                height="20"
                 viewBox="0 0 20 20"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   fill-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                   clip-rule="evenodd"
-                ></path>
+                  d="M9.67627 1.66669C5.25268 1.66669 1.66666 5.17351 1.66666 9.4994C1.66666 13.8253 5.25268 17.3321 9.67627 17.3321C11.5682 17.3321 13.307 16.6906 14.6775 15.6179L17.2809 18.1572L17.3501 18.2155C17.5918 18.3905 17.9345 18.3706 18.1532 18.1561C18.3938 17.9202 18.3933 17.5383 18.1521 17.303L15.5793 14.7936C16.8874 13.3995 17.6859 11.5406 17.6859 9.4994C17.6859 5.17351 14.0999 1.66669 9.67627 1.66669ZM9.67627 2.87313C13.4185 2.87313 16.4522 5.83982 16.4522 9.4994C16.4522 13.159 13.4185 16.1257 9.67627 16.1257C5.93404 16.1257 2.90035 13.159 2.90035 9.4994C2.90035 5.83982 5.93404 2.87313 9.67627 2.87313Z"
+                  fill="#999999"
+                />
               </svg>
             </div>
           </div>
         </form>
       </div>
       <!-- User login -->
-      <div class="ml-6 col-span-2" >
+      <div class="ml-6 col-span-2">
         <div
           class="flex items-center justify-start space-x-4"
           @click="toggleDrop"
@@ -138,7 +154,7 @@
             <span
               class="flex items-center gap-2 text-[#023A59] whitespace-nowrap text-base font-normal leading-6"
             >
-              Bosipo Ogunleye
+              Solomon
               <svg
                 class="h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +172,7 @@
           </button>
         </div>
         <!-- Drop down -->
-        </div>
+      </div>
     </div>
   </div>
 </template>

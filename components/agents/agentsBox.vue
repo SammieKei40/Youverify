@@ -11,7 +11,10 @@
                             : 'text-[#C4C4C4] font-normal',
                     ]">
                         <h2 class="ml-2 lg:inline-block truncate ">
-                             {{ item.text }}
+                            <span class="flex items-center gap-2">
+
+                          <component :is="item.icon" :color="item.color" />   {{ item.text }}
+                            </span>
                         </h2>
                     </div>
                 </nuxt-link>
@@ -41,6 +44,7 @@
 import OfflineAgent from './offlineAgent.vue'
 import OnlineAgent from './onlineAgent.vue'
 import AllAgents from './allAgents.vue'
+import { OcDotFill } from "@kalimahapps/vue-icons";
 
 const active = ref(parseInt(localStorage.getItem("active")) || 0);
 
@@ -49,9 +53,9 @@ const TotalCompletedLength = ref(0);
 const TotalAssignedLength = ref(0);
 
 const allItems = [
-    { text: "All", link: "#", number: `${0}` },
-    { text: "Online", link: "#", number: `${0}` },
-    { text: "Offline", link: "#", number: `${0}` },
+    { text: "All", link: "#", number: `${0}`, icon: "" },
+    { text: "Online", link: "#", number: `${0}`, icon: OcDotFill, color: "#2EB255" },
+    { text: "Offline", link: "#", number: `${0}`, icon: OcDotFill, color: "#D14349" },
 ];
 const setActive = (index) => {
     active.value = index;

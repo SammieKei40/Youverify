@@ -21,11 +21,15 @@ export default defineNuxtConfig({
         }
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+        { rel: 'stylesheet', href: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'}
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-  css: ["~/assets/css/main.css"],
+  // plugins: [
+    // { src: '~/plugins/google-maps.ts', mode: 'client' },
+  // ],
+  css: ["~/assets/css/main.css", 'leaflet/dist/leaflet.css'],
   modules: ["@nuxtjs/tailwindcss"],
   postcss: {
     plugins: {

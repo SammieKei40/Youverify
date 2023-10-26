@@ -14,7 +14,7 @@
 
             <div class="flex flex-col gap-2">
                 <span class="text-black font-medium text-md">{{ item.name }}</span>
-                <span class="text-[#ACB6BE] font-normal truncate text-base">
+                <span class="text-[#ACB6BE] font-normal text-base">
                     {{ item.address }}
                 </span>
                 <span class="text-[#ACB6BE] font-normal text-base">{{ item.company }}</span>

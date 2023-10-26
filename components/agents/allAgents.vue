@@ -3,7 +3,7 @@
         class="flex items-center justify-between border  bg-[#FEFEFE] border-[#F1F1F1]  p-3">
         <div class="flex gap-5 items-center">
             <div class="flex flex-col justify-center items-center w-12">
-                <img src="/smiling.png" alt="" class="rounded-full w-20">
+                <img :src="item.picture_url" alt="" class="rounded-full w-20">
             </div>
 
             <div class="flex flex-col gap-1">
@@ -31,140 +31,140 @@ const data = ref([
         "full_name": "John Doe",
         "number": "+1234567890",
         "state": "Lagos",
-        "picture_url": "https://example.com/johndoe.jpg"
+        "picture_url": "/man1.png"
     },
     {
         "id": 2,
         "full_name": "Alice Smith",
         "number": "+9876543210",
         "state": "Abuja",
-        "picture_url": "https://example.com/alicesmith.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 3,
         "full_name": "Bob Johnson",
         "number": "+1112223333",
         "state": "Kano",
-        "picture_url": "https://example.com/bobjohnson.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 4,
         "full_name": "Sarah Williams",
         "number": "+5555555555",
         "state": "Rivers",
-        "picture_url": "https://example.com/sarahwilliams.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 5,
         "full_name": "Michael Brown",
         "number": "+9998887777",
         "state": "Enugu",
-        "picture_url": "https://example.com/michaelbrown.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 6,
         "full_name": "Grace Davis",
         "number": "+1112233444",
         "state": "Ekiti",
-        "picture_url": "https://example.com/gracedavis.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 7,
         "full_name": "Daniel Taylor",
         "number": "+7777666555",
         "state": "Kwara",
-        "picture_url": "https://example.com/danieltaylor.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 8,
         "full_name": "Sophia White",
         "number": "+1234123412",
         "state": "Ogun",
-        "picture_url": "https://example.com/sophiawhite.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 9,
         "full_name": "David Miller",
         "number": "+5555666677",
         "state": "Ondo",
-        "picture_url": "https://example.com/davidmiller.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 10,
         "full_name": "Olivia Martin",
         "number": "+9876987698",
         "state": "Benue",
-        "picture_url": "https://example.com/oliviamartin.jpg"
+        "picture_url": "/man1.png"
     },
     {
         "id": 11,
         "full_name": "James Anderson",
         "number": "+5555444433",
         "state": "Akwa Ibom",
-        "picture_url": "https://example.com/jamesanderson.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 12,
         "full_name": "Emily Harris",
         "number": "+7777333222",
         "state": "Kaduna",
-        "picture_url": "https://example.com/emilyharris.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 13,
         "full_name": "Liam Wilson",
         "number": "+2222111100",
         "state": "Plateau",
-        "picture_url": "https://example.com/liamwilson.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 14,
         "full_name": "Ava Johnson",
         "number": "+6666777888",
         "state": "Cross River",
-        "picture_url": "https://example.com/avajohnson.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 15,
         "full_name": "Noah Davis",
         "number": "+1234567890",
         "state": "Imo",
-        "picture_url": "https://example.com/noahdavis.jpg"
+        "picture_url": "/man1.png"
     },
     {
         "id": 16,
         "full_name": "Isabella Lee",
         "number": "+1111222333",
         "state": "Delta",
-        "picture_url": "https://example.com/isabellalee.jpg"
+        "picture_url": "/man2.png"
     },
     {
         "id": 17,
         "full_name": "Oliver Martinez",
         "number": "+5555666777",
         "state": "Kogi",
-        "picture_url": "https://example.com/olivermartinez.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 18,
         "full_name": "Mia Brown",
         "number": "+7777666555",
         "state": "Nasarawa",
-        "picture_url": "https://example.com/miabrown.jpg"
+        "picture_url": "/man1.png"
     },
     {
         "id": 19,
         "full_name": "Ethan Harris",
         "number": "+5555555555",
         "state": "Taraba",
-        "picture_url": "https://example.com/ethanharris.jpg"
+        "picture_url": "/smiling.png"
     },
     {
         "id": 20,
         "full_name": "Emma Wilson",
         "number": "+9998887777",
         "state": "Yobe",
-        "picture_url": "https://example.com/emmawilson.jpg"
+        "picture_url": "/man2.png"
     }
 ]
 )

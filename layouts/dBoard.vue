@@ -8,7 +8,7 @@
             <!-- Main content -->
             <div class="flex overflow-auto min-h-screen md:min-h-0 md:overflow-y-hidden md:px-auto md:pt-auto text-base">
                 <transition name="sidebar-slide" mode="out-in">
-                    <div class="h-full z-10 shadow-sm border-r sidebar"
+                    <div class="h-full w-[241px] z-10 shadow-sm border-r sidebar"
                         :style="{ 'max-width': showSide ? '241px' : '0', opacity: showSide ? 1 : 0 }">
                         <SideBar @toggle-sidebar="toggleSidebar" />
                     </div>
