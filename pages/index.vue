@@ -13,6 +13,8 @@
                 <header class="bg-[#46B2C8] p-3 font-semibold text-white h-[42px]">
                         Agents
                     </header>
+
+                    <AgentsBox/>
             </div>
         </div>
     </div>
