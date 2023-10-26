@@ -110,7 +110,7 @@
           class="flex items-center justify-start space-x-4"
           @click="toggleDrop"
         >
-          <div class="relative border bg-[#C2E2E9] p-1 rounded-full">
+          <div class="relative border bg-[#C2E2E9] p-2  rounded-full">
             <!-- Notification icon -->
             <div class="relative inline-block">
               <!-- Notification icon itself -->

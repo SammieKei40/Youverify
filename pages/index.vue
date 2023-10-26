@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full m-0 p-0 overflow-x-hidden">
+    <div class="w-full mt-10 overflow-x-hidden">
         <div class="grid  grid-cols-1 h-screen lg:grid-cols-12">
             <div class="col-span-4 ">
                 <header class="bg-[#46B2C8] p-3 font-semibold text-white h-[42px]">

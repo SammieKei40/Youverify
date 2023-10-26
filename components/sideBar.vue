@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { AkShoppingBag, FaUsers, FlDocumentOnePage, BsShieldFillCheck, PxBuildings, CdSettingsGear } from "@kalimahapps/vue-icons";
+import { GlWork, FaUsers, FlDocumentOnePage, BsShieldFillCheck, PxBuildings, CdSettingsGear } from "@kalimahapps/vue-icons";
 
 const emit = defineEmits();
 
@@ -42,7 +42,7 @@ const toggleSidebar = () => {
 const activeIndex = ref(parseInt(localStorage.getItem("activeIndex")) || 0);
 
 const allItems = [
-  { text: "Dashboard", link: "", icon: AkShoppingBag },
+  { text: "Dashboard", link: "", icon: GlWork },
   { text: "Agents", link: "", icon: FaUsers },
   { text: "Task", link: "", icon: FlDocumentOnePage },
   { text: "Teams", link: "", icon:  BsShieldFillCheck },

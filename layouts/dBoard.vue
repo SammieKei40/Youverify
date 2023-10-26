@@ -13,7 +13,10 @@
                         <SideBar @toggle-sidebar="toggleSidebar" />
                     </div>
                 </transition>
+
+
                 <slot></slot>
+
             </div>
         </div>
     </div>
