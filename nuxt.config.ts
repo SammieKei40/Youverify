@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   // plugins: [
     // { src: '~/plugins/google-maps.ts', mode: 'client' },
   // ],
-  css: ["~/assets/css/main.css", 'leaflet/dist/leaflet.css'],
+  css: ["~/assets/css/main.css",],
   modules: ["@nuxtjs/tailwindcss"],
   postcss: {
     plugins: {

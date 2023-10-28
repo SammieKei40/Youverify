@@ -42,12 +42,12 @@ const toggleSidebar = () => {
 const activeIndex = ref(parseInt(localStorage.getItem("activeIndex")) || 0);
 
 const allItems = [
-  { text: "Dashboard", link: "", icon: GlWork },
-  { text: "Agents", link: "", icon: FaUsers },
-  { text: "Task", link: "", icon: FlDocumentOnePage },
-  { text: "Teams", link: "", icon:  BsShieldFillCheck },
-  { text: "Users", link: "", icon: PxBuildings },
-  { text: "Settings", link: "", icon: CdSettingsGear },
+  { text: "Dashboard", link: "/", icon: GlWork },
+  { text: "Agents", link: "/", icon: FaUsers },
+  { text: "Task", link: "/", icon: FlDocumentOnePage },
+  { text: "Teams", link: "/", icon:  BsShieldFillCheck },
+  { text: "Users", link: "/", icon: PxBuildings },
+  { text: "Settings", link: "/", icon: CdSettingsGear },
 ];
 
 const displayedItems = ref([]);

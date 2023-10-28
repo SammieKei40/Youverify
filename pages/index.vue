@@ -6,7 +6,7 @@
                     Task
                 </header>
 
-                <TaskBox />
+                <LazyTaskBox />
             </div>
             <div class="col-span-4 bg-white">
                 <leaflet-map :center="mapCenter" :zoom="mapZoom"/>
@@ -21,7 +21,7 @@
 
                     </header>
 
-                    <AgentsBox/>
+                    <LazyAgentsBox/>
             </div>
         </div>
     </div>
